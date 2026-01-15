@@ -1,8 +1,7 @@
 #include <GL/glut.h>
 #include <math.h>
 #include <stdlib.h>
-
-// --- Variabel Kontrol ---
+// Variabel global
 bool lampuNyala = true; 
 bool showAxes = true; 
 bool raketGerak = false;
@@ -10,17 +9,17 @@ float bolaPosisiX = 0.4f;
 float bolaPosisiZ = 0.4f;
 float bolaPosisiY = 0.4f; 
 float tinggiTiang = 6.0f;
-float puter = true; // <--- Variabel baru untuk tinggi tiang
+float puter = true; 
 float raketZ = 0.0f;
 
-// --- Kamera ---
+// Kamera 
 float cameraAngleX = 0.8f;
 float cameraAngleY = 0.5f;
 float cameraDistance = 25.0f;
 int isDragging = 0; 
 int lastX, lastY;
 
-// --- FUNGSI SUMBU KOORDINAT ---
+// FUNGSI SUMBU KOORDINAT
 void drawAxes() {
     if (!showAxes) return;
     glDisable(GL_LIGHTING); 
@@ -238,7 +237,7 @@ void drawTribunKanan() {
     }
 }
 void drawTribunKiri() {
-    float xPos = -8.0f;   // ← sisi kiri lapangan
+    float xPos = -8.0f;   // sisi kiri lapangan
     float yStart = 0.1f;
     float zSize = 18.0f;
 
@@ -401,7 +400,6 @@ void keyboard(unsigned char key, int x, int y) {
 		case 'm':
         case 'M': 
         puter += 1.0f; 
-        raketGerak = !raketGerak;
         break;
 
         case 27:
@@ -454,4 +452,5 @@ int main(int argc, char **argv) {
     glutIdleFunc(idle);
     glutMainLoop();
     return 0;
+
 }

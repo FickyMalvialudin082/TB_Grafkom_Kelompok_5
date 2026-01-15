@@ -282,7 +282,6 @@ void drawRaketHitam(float x, float z) {
     glPushMatrix();
     glTranslatef(0, 2, z); // Letakkan sedikit di atas lantai
     glRotatef(puter, 0, 2, 0); // Tidurkan raket di lantai
-    glRotatef(0, 0, 0, 5);  // Sedikit miring agar artistik
 
     // Kepala Raket (Hitam)
     glColor3f(0.02, 0.02, 0.02); 
@@ -454,3 +453,4 @@ int main(int argc, char **argv) {
     return 0;
 
 }
+
